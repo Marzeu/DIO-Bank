@@ -24,7 +24,7 @@ namespace DIO.Bank
                       //  Transferir();
                         break;
                     case "4":
-                      //  Sacar();
+                        Sacar();
                         break;
                     case "5":
                      //   Depositar();
@@ -42,6 +42,17 @@ namespace DIO.Bank
 
             Console.WriteLine("Obrigado por utilizar nossos serviços.");
             Console.ReadLine();
+        }
+
+        private static void Sacar()
+        {
+            Console.Write("Digite o número da conta: ");
+            int indiceConta = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o valor a ser sacado: ");
+            double valorSaque = double.Parse(Console.ReadLine());
+
+            listContas[indiceConta].Sacar(valorSaque);
         }
 
         private static void InserirConta()
